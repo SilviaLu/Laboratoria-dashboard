@@ -7,7 +7,7 @@ console.log(data);
 
 // se crearan las keys cohorts y cohortsList, las cuales representan
 // el numero de cohortes y una lista de las cohortes respectivamente
-var centers = [
+var centers = [     // en caso de querer aumentr una nueva sede, solo aumentar un name mas su key.
   {name: 'arequipa',
     key: 'AQP'},
   {name: 'ciudad de mexico',
@@ -18,13 +18,14 @@ var centers = [
     key: 'SCL'}
 ];
 
+
 // se crean la cantidad de cohortes por sede
 // y la lista de sus cohortes
 function getCohorts() {
   for (var i = 0; i < centers.length; i++) {
     // cohortes por sede
     keys = Object.keys(data[centers[i].key]);
-    // numero de cohortes
+    // numero de cohortes1
     centers[i].cohorts = keys.length;
     // cohortes
     centers[i].cohortsList = keys;
